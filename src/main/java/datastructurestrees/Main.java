@@ -5,6 +5,8 @@ import datastructurestrees.model.Object;
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println("\n\n========================================");
+
         BinaryTree<Object> binaryTree = new BinaryTree<>();
         binaryTree.insert(new Object(13));
         binaryTree.insert(new Object(10));
