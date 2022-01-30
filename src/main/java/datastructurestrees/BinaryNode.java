@@ -1,6 +1,6 @@
 package datastructurestrees;
 
-public class BinaryNode<T> implements Comparable<T> {
+public class BinaryNode<T extends Comparable<T>> {
 
     private T content;
     private BinaryNode<T> leftNode;
@@ -9,6 +9,9 @@ public class BinaryNode<T> implements Comparable<T> {
     public BinaryNode(T content) {
         this.content = content;
         this.leftNode = this.rightNode = null;
+    }
+
+    public BinaryNode() {
     }
 
     public T getContent() {
@@ -40,10 +43,5 @@ public class BinaryNode<T> implements Comparable<T> {
         return "BinaryNode{" +
                 "content=" + content +
                 '}';
-    }
-
-    @Override
-    public int compareTo(T o) {
-        return 0;
     }
 }
